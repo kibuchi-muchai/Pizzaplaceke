@@ -11,3 +11,4 @@ function Order(size, crust,toppings,quantity,delivery) {
 }
 Order.prototype.allInformation=function(){
     return this.sizeofpizza + "," + this.crust + "," + this.pizzatoppings + "," + this.pizzaquantity + ","}
+    
