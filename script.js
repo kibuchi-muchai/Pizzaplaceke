@@ -62,3 +62,15 @@ if($('#pizzaquantity').val()){
 if($('#pizzaquantity').val()){
     console.log()
 }
+var newOrder;
+var newOrder = new Order(inputtedpizzasize,inputtedcrust,additiontoppings,inputtedpizzaquantity,inputtedpizzadelivery);
+console.log(newOrder)
+console.log($('#delivery').val())
+$("#get-pizza").show();
+$(".pizza-size").text(newOrder.pizzaSize);
+$(".crust").text(newOrder.crust);
+
+$(".pizza-toppings").text(newOrder.pizzaSize);
+$(".pizza-quantity").text(newOrder.pizzaquantity);
+
+
