@@ -51,4 +51,14 @@ for(var a=0; a<thechoosenpizzatoppings.length; a++){
         console.log(additiontoppings)
     }
 }
-console.log
+console.log(additiontoppings)
+var inputtedpizzaquantity
+var inputtedpizzadelivery =$('delivery').val()
+
+if($('#pizzaquantity').val()){
+    inputtedpizzaquantity=$('#delivery').val();
+    console.log(inputtedpizzaquantity)
+}
+if($('#pizzaquantity').val()){
+    console.log()
+}
