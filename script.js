@@ -38,5 +38,17 @@ for(var a=0; a<thechoosenpizzatoppings.length; a++){
         additiontoppings += 500
         console.log(additiontoppings)
     }
-    
+    else if (thechoosenpizzatoppings[a]==="mushroom"){
+        additiontoppings +=500
+        console.log(additiontoppings)
+    }
+    else if (thechoosenpizzatoppings[a]==="extra cheese"){
+        additiontoppings +=700
+        console.log(additiontoppings)
+    }
+    else if (thechoosenpizzatoppings[a]==="green pepper"){
+        additiontoppings +=900
+        console.log(additiontoppings)
+    }
 }
+console.log
