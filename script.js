@@ -13,12 +13,22 @@ Order.prototype.allInformation=function(){
     return this.sizeofpizza + "," + this.crust + "," + this.pizzatoppings + "," + this.pizzaquantity + "," + this.pizzadelivery}
 
     //user interface logic
-$(document).ready(function(){
+$(document).ready (function(){
     $("form#pizza").submit(function(event){
         event.preventDefault();
+
     var inputtedpizzasize=$("#size").val();
     console.log(inputtedpizzasize)
-      
-    var inputtedcrust=$()  
+
+     var inputtedcrust=$("#crust").val();
+    console.log(inputtedcrust)
+
+    var thechoosenpizzatoppings=[];
+    $('input[type=checkbox]:checked').each(function() {
+        thechoosenpizzatoppings.push($(this).val());
     }
-}
+   ,); 
+    }
+,)})
+
+
