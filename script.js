@@ -10,5 +10,15 @@ function Order(size, crust,toppings,quantity,delivery) {
     this.pizzadelivery = delivery;
 }
 Order.prototype.allInformation=function(){
-    return this.sizeofpizza + "," + this.crust + "," + this.pizzatoppings + "," + this.pizzaquantity + ","}
-    
+    return this.sizeofpizza + "," + this.crust + "," + this.pizzatoppings + "," + this.pizzaquantity + "," + this.pizzadelivery}
+
+    //user interface logic
+$(document).ready(function(){
+    $("form#pizza").submit(function(event){
+        event.preventDefault();
+    var inputtedpizzasize=$("#size").val();
+    console.log(inputtedpizzasize)
+      
+    var inputtedcrust=$()  
+    }
+}
