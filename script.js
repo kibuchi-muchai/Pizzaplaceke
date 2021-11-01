@@ -31,4 +31,12 @@ $(document).ready (function(){
     }
 ,)})
 
-
+console.log(thechoosenpizzatoppings);
+var additiontoppings = 0;
+for(var a=0; a<thechoosenpizzatoppings.length; a++){
+    if(thechoosenpizzatoppings[a]==="Spicy pepperoni $ pepper"){
+        additiontoppings += 500
+        console.log(additiontoppings)
+    }
+    
+}
