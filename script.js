@@ -61,7 +61,8 @@ if($('#pizzaquantity').val()){
 }
 if($('#pizzaquantity').val()){
     console.log()
-}
+
+
 var newOrder;
 var newOrder = new Order(inputtedpizzasize,inputtedcrust,additiontoppings,inputtedpizzaquantity,inputtedpizzadelivery);
 console.log(newOrder)
@@ -72,5 +73,12 @@ $(".crust").text(newOrder.crust);
 
 $(".pizza-toppings").text(newOrder.pizzaSize);
 $(".pizza-quantity").text(newOrder.pizzaquantity);
+
+var yourlocation=prompt("please type in your location:");
+alert("your order has been received and we will deliver to" + yourlocation + ".Thank you for making your orders");
+}
+else {
+    $(".pizza-delivery").text("please select whether to deliver or not");
+}
 
 
