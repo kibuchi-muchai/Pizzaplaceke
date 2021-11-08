@@ -9,7 +9,7 @@ function Order(size, crust,toppings,quantity,delivery) {
     this.pizzaquantity = quantity;
     this.pizzadelivery = delivery;
 }
-//user interface logic
+
 let firstPizza = new Pizza("small","spicy pepperoni & pepper","crispy",1000,1)
 let secondPizza = new Pizza("small","spicy pepperoni & pepper","stuffed",1000,2)
 let thirdPizza = new Pizza("small","spicy pepperoni & pepper","gluten-free",1000,3)
@@ -46,3 +46,8 @@ let thirtythirdPizza = new Pizza("medium","green pepper","gluten-free",1000,33)
 let thirtyfourthfPizza = new Pizza("large","green pepper","crispy",1000,34)
 let thirtyfifthPizza = new Pizza("large","green pepper","stuffed",1000,35)
 let thirtysixthPizza = new Pizza("large","green pepper","gluten-free",1000,36)
+
+//user interface logic
+pizza.prototype.myOrderDetails = function (){
+    console.log('your order has been received for' + this.size + 'pizza with'+ this.crust + 'and' + this.toppings)
+}
