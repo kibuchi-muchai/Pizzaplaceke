@@ -68,17 +68,18 @@
             value="0">no</option>
         </select>
     </div>
-    <div class="Pizzaplaceke">
-        <div id="get-pizza">
-            <p>pizza-size <strong class="pizza-size"></strong></p>
-            <p>pizza-crust <strong class="crust"></strong></p>
-            <p>pizza-toppings <strong class="pizza-toppings"></strong></p>
-            <p>pizza-quantity <strong class="pizza-quantity"></strong></p>
-            <p>pizza-delivery <strong class="pizza-delivery"></strong></p>
-            <p>the total amount:</p>
-        </div>
     </div>
-    <button type="submit" class="btn">checkout</button>
+    <button id="orderButton" class="btn">submit order</button>
+    <button  id="orderAnotherButton" class="btn">submit another order</button>
+    <div class="row pizza-orders"></div>
+    <div class="col-md-12">
+        <h1>YOUR ORDERS</h1>
+        <p>
+            order No:<span id="orderNo"></span>size:
+            <span id ="size"></span>toppings: <span id="topings"></span>
+        </p>
+    </div>
+    </form>
     </form>
     <ul id="orderone">
         <li></li>
