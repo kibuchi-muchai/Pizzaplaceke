@@ -47,7 +47,19 @@ let thirtyfourthfPizza = new Pizza("large","green pepper","crispy",1000,34)
 let thirtyfifthPizza = new Pizza("large","green pepper","stuffed",1000,35)
 let thirtysixthPizza = new Pizza("large","green pepper","gluten-free",1000,36)
 
-//user interface logic
+
 pizza.prototype.myOrderDetails = function (){
     console.log('your order has been received for' + this.size + 'pizza with'+ this.crust + 'and' + this.toppings)
 }
+
+//user interface logic
+$(document).ready(function () {
+    $('button#orderButton').click(function () {
+        var pizzaSize = $('.pizza-size option:selected').val();
+        var pizzatoppings = $('.pizza-toppings option:selected').val();
+        var pizzacrust = $('.pizza-crust option:selected').val();
+    
+});
+});
+
+
