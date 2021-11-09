@@ -1,6 +1,3 @@
-var username = prompt("whats your name?")
-document.write(`Hello${username},how are you? please make your orders and we will deliver within 24hrs`)
-
 //business logic
 function Order(size, crust,toppings,quantity,delivery) {
     this.pizzaSize = size;
@@ -55,11 +52,52 @@ pizza.prototype.myOrderDetails = function (){
 //user interface logic
 $(document).ready(function () {
     $('button#orderButton').click(function () {
+
+    $('#orderAnotherButton, pizza-orders, #grandTotal').hide();
+
         var pizzaSize = $('.pizza-size option:selected').val();
         var pizzatoppings = $('.pizza-toppings option:selected').val();
         var pizzacrust = $('.pizza-crust option:selected').val();
+
+        var total = parseInt(pizzaSize) + parseInt(pizzatoppings) + parseInt(pizzacrust);
+        var order = 1;
+        var grandTotal =0;
+
+
+        $("#orderNo").html(order);
+        $("#size").html(pizzaSize);
+        $("#toppings").html(pizzacrust);
+        $('#total').html(total);
+
+        $('#grandTotal').html(grandTotal + total);
+
+        $('#orderButton').hide()
+        $('#orderAnotherButton ,pizza-orders, grandTotal').show();
+
+        $('button#orderAnotherButton').click(function (){
+            var pizzaSize = $('.pizza-size option:selected').text() + "-" + pizzaSize;
+            var pizzatoppings = $('.pizza-toppings option:selected').text()+ "-" + pizzatoppings ;
+            var pizzacrust = $('.pizza-crust option:selected').text() + "-" + pizzacrust;
+            var total = parseInt(pizzaSize) + parseInt(pizzatoppings) + parseInt(pizzacrust);
+            order = order + 1;
+            var grandTotal =0;
+
+            let.newpizza = new pizza(pizzaSize,pizzatoppings,pizzacrust,total,order);
+            let.newpizzaorder ='<p>order No: <span id="orderNo" + order + '<span ;id ="size"+$('.pizza-size option:selected').text() + "-" + newPizza.size + '</span> Toppings: <span id="Toppings">' +$('.pizza-toppings option:selected').text()+ "-" + newPizza.toppings +'</span crust:<span id=:"crust"'+ $('.pizza-crust option:selected').text() + "-" + newPizza.crust + '</span><strong>Total : <span id="total">' + newPizza.total + '</span></strong'
+        .
+        _});
+        $('.pizza-orders').append(newPizzaOrder);
+        $('#grandTotal span').html(grandTotal);
+
+        $('button#checkoutButton').click(function(){
+            prompt('Do you want it to be delivered?');
+        }
     
-});
-});
+        
+    
 
+    ,);
+    }
 
+    ,);
+})
